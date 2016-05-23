@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'BigJohn';
+	src: url('assets/BIG_JOHN.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SlimJoe';
+    src: url('assets/Slim_Joe.otf') format('opentype'); 
+}

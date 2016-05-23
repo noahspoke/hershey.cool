@@ -6,18 +6,9 @@
 
 	<link rel="stylesheet" href="assets/normalize.css">
 	<link rel="stylesheet" href="skeleton.css">
+  <link rel="stylesheet" href="fonts.css">
 
 	<style>
-		@font-face {
-			font-family: 'BigJohn';
-			src: url('assets/BIG_JOHN.otf') format('opentype');
-		}
-
-    @font-face {
-      font-family: 'SlimJoe';
-      src: url('assets/Slim_Joe.otf') format('opentype'); 
-    }
-
 		html {
       height: 100%;
 		}
@@ -105,18 +96,6 @@
       text-decoration: none;
     }
 
-    .active_link {
-      color: white;
-      padding: 12px;
-      margin: 0 6px;
-      background-color: #c43235;
-      line-height: 220%;
-    }
-
-    .active_link:hover {
-      color: white;
-    }
-
 		.hvr-outline-out {
   			display: inline-block;
   			vertical-align: middle;
@@ -150,6 +129,15 @@
   			left: -8px;
 		}
 
+    p a {
+      font-family: 'BigJohn', sans-serif;
+      color: white;
+    }
+
+    p a:hover {
+      color: white;
+    }
+
     @media screen and (max-width: 551px) {
       html {
         height: initial;
@@ -182,6 +170,7 @@
       }
   }
 	</style>
+  <link rel="stylesheet" href="button.css">
 
 </head>
 
@@ -221,7 +210,7 @@
 		</div>
 
     <footer>
-      <p>Made by <a class="active_link hvr-outline-out" href="https://twitter.com/spochart">spochart</a> and <a class="active_link hvr-outline-out" href="http://tsunamictech.com">tsunamic</a></p>
+      <p>Made by <a href="https://twitter.com/spochart">spochart</a> and <a href="http://tsunamictech.com">tsunamic</a></p>
     </footer>
 
   </div>

@@ -6,7 +6,7 @@
 	define('DATABASE_PASS', $pass);
 	define('DATABASE_HOST', $host);
 	include_once('class.DBPDO.php');
-	include_once('colorsofimage.class.php');
+	
 	class Place {
 
 		function findPlace($id) {
@@ -20,11 +20,23 @@
 			$records = $DB->fetchAll("SELECT * FROM records WHERE place_id = ?", $id);
 			return $records;
 		}
+
+		function currentUser() {
+			if (isset($_COOKIE["current_user"])) {
+				$DB = new DBPDO();
+				$user = $DB->fetch("SELECT * FROM users WHERE id = ?", $_COOKIE["current_user"]);
+				return $user;
+			}
+			else {
+				return false;
+			}
+		}
 	}
 	
 	$place = new Place();
 	$current_place = $place->findPlace($_GET['id']);
 	$records = $place->findRecords($_GET['id']);
+	$current_user = $place->currentUser();
 ?>
 <!DOCTYPE html>
 <html>
@@ -376,6 +388,15 @@
 				height: 400%;
 				opacity: 1;
 			}
+
+			p a {
+				font-family: 'BigJohn', sans-serif;
+			}
+
+			p a .btn {
+				color: white;
+				padding: 16px 16px;
+			}
 	</style>
 
 	<body>
@@ -472,7 +493,15 @@
 
 		<p class="average_text">A collection of our favorite <?php echo $current_place["name"]; ?> experiences.</p>
 
-		<footer><button class="btn btn-1 btn-1e"><a href="new.php?pid=<?php echo $current_place["id"]; ?>">Add a new idea.</button></a></footer>
+		<footer><button class="btn btn-1 btn-1e"><a href="new.php?pid=<?php echo $current_place["id"]; ?>">Add a new idea.</a></button></footer>
+
+		<?php 
+			if (isset($_COOKIE["current_user"])) {
+		?>
+				<p style="margin: 44px 0;" class="average_text"><?php echo $current_user["name"]; ?>  <a href="logout.php">Log Out.</a></p>
+		<?php
+			}
+		?>
 
 	</body>
 

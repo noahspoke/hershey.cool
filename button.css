@@ -1,0 +1,83 @@
+			.btn {
+				border: none;
+				font-family: inherit;
+				font-size: inherit;
+				color: #c43235;
+				background: none;
+				cursor: pointer;
+				padding: 25px 80px;
+				display: inline-block;
+				margin: 30px 0;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				outline: none;
+				position: relative;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+			}
+
+			.btn:after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+			}
+
+			/* Pseudo elements for icons */
+			.btn:before {
+				font-family: 'icomoon';
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				position: relative;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			.btn-1 {
+				border: 3px solid #c43235;
+				color: #c43235;
+			}
+
+
+			.btn-1e {
+				overflow: hidden;
+			}
+
+			.btn-1e:after {
+				width: 100%;
+				height: 0;
+				top: 50%;
+				left: 50%;
+				background: #c43235;
+				opacity: 0;
+				-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+				-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+				-ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+				transform: translateX(-50%) translateY(-50%) rotate(45deg);
+			}
+
+			.btn-1e:hover,
+			.btn-1e:active {
+				color: white;
+			}
+
+			.btn-1e:hover:after {
+				height: 260%;
+				opacity: 1;
+			}
+
+			.btn-1e:active:after {
+				height: 400%;
+				opacity: 1;
+			}
+
+			.btn a {
+				color:inherit;
+
+			}
