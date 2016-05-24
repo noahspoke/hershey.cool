@@ -1,13 +1,15 @@
-<?php include('partials.php'); 
+<?php 
+	include('partials.php'); 
+	require('db_info.php');
 	
 	$partials = new Partials();
 
 	if (!isset($_GET["pid"])) {
-		header("Location: http://localhost/showcase/home.php");
+		header("Location: ".$url_scheme."home.php");
 	}
 
 	if (!isset($_COOKIE["current_user"])) {
-		header("Location: http://localhost/showcase/members.php");
+		header("Location: ".$url_scheme."members.php");
 	}
 ?>
 <!DOCTYPE html>
@@ -74,6 +76,11 @@
   			<div class="question">
     			<input type="textarea" name="description" required/>
     			<label>Description</label>
+  			</div>
+
+  			<div class="question">
+    			<input type="text" name="link" required/>
+    			<label>Link</label>
   			</div>
   
   			<input type="file" name="file" id="file" class="inputfile"/>

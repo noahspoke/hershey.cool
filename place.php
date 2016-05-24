@@ -155,9 +155,14 @@
 			overflow: hidden;
 		}
 
+		.record:hover {
+			cursor: pointer;
+		}
+
 		.well {
 			display: none;
 			background-color: #c43235;
+			max-width:700px;
 		}
 
 		.image_text {
@@ -223,6 +228,10 @@
 			margin-left: 8px;
 		}
 
+		svg:hover {
+			cursor: pointer;
+		}
+
 		h4, .popup_p {
 			color: white;
 			margin:0;
@@ -232,7 +241,7 @@
 			font-family: 'BigJohn', sans-serif;
 			text-align: right;
 			font-size: 32px;
-			margin-left: 16px;
+			margin-left:32px;
 		}
 
 		.popup_p {
@@ -461,6 +470,7 @@
     				<div class="second_half">
    	 					<p class="popup_p"><?php echo $record['highlight']; ?></p>
     					<p class="popup_p"><?php echo $record['description']; ?></p>
+    					<p class="popup_p popup_a"><a href="<?php echo $record['link']; ?>"><?php echo $record['link']; ?></a></p>
     				</div>
 				</div>
 

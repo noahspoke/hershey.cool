@@ -14,7 +14,7 @@
 
 	$I_DB = new medoo([
 			'database_type' => 'mysql',
-    		'database_name' => 'showcase',
+    		'database_name' => $name,
     		'server' => $host,
     		'username' => $user,
     		'password' => $pass,
@@ -37,13 +37,13 @@
 		$new_user = $DB->fetch($query);
 
 		setcookie("current_user", "", time() - 86400);
-		setcookie("current_user", $new_user["id"], time() + 86400, "/");
-		header("Location: http://localhost/showcase/home.php");
+		setcookie("current_user", $new_user["id"], time() + (86400*100000), "/");
+		header("Location: ".$url_scheme."home.php");
 	}
 	else if ($user) {
 		//login
 		setcookie("current_user", "", time() - 86400);
-		setcookie("current_user", $user["id"], time() + 86400, "/");
-		header("Location: http://localhost/showcase/home.php");
+		setcookie("current_user", $user["id"], time() + (86400*100000), "/");
+		header("Location: ".$url_scheme."home.php");
 	}
 ?>

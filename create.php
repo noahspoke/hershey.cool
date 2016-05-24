@@ -6,14 +6,15 @@
 	$pid = $_POST["pid"];
 	$highlight = $_POST["highlight"];
 	$description = $_POST["description"];
+	$link = $_POST["link"];
 
-	$destination_path = "/Library/WebServer/Documents/showcase/images/";
-	$target_file = $destination_path . $_FILES["file"]["name"];
+	$destination_path = $image_root;
+	$target_file = "images/" . $_FILES["file"]["name"];
 
 
 	$DB = new medoo([
 			'database_type' => 'mysql',
-    		'database_name' => 'showcase',
+    		'database_name' => $name,
     		'server' => $host,
     		'username' => $user,
     		'password' => $pass,
@@ -26,7 +27,8 @@
 			'place_id' => $pid,
 			'highlight' => $highlight,
 			'description' => $description,
-			'url' => $target_file
+			'url' => $target_file,
+			'link' => $link
 		]);
 		
 	if ($_FILES["file"]["error"] > 0) 
@@ -46,9 +48,10 @@
 	      } 
 	    else 
 	      { 
-	      move_uploaded_file($_FILES["file"]["tmp_name"], 
-	      $destination_path . $_FILES["file"]["name"]); 
-	      echo "Stored in: " . $destination_path . $_FILES["file"]["name"]; 
+		      move_uploaded_file($_FILES["file"]["tmp_name"], 
+		      $destination_path . $_FILES["file"]["name"]); 
+		      echo "Stored in: " . $destination_path . $_FILES["file"]["name"]; 
+	      	  header("Location: ".$url_scheme."place.php?id=".$pid);
 	      } 
     }
 ?>

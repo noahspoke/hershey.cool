@@ -67,7 +67,12 @@
 			margin-bottom: 32px;
 			line-height: 100%;
 			padding: 40px 20px;
+      border: 1px solid #fff;
 		}
+
+    .column:hover {
+      color:#fff;
+    }
 
 		svg {
 			width: 100%;
@@ -170,7 +175,6 @@
       }
   }
 	</style>
-  <link rel="stylesheet" href="button.css">
 
 </head>
 
@@ -181,31 +185,31 @@
     
 		<div class="container">
 			<div class="row">
-				<a href="place.php?id=3"><div class="one-third column hvr-outline-out">
+				<a href="place.php?id=3" class="one-third column">
 					<p>Downtown</p><p style="font-family:'BigJohn', sans-serif;">The Square</p>
-				</div></a>
+				</a>
 
-				<div class="one-third column hvr-outline-out">
+				<a href="place.php?id=4" class="one-third column">
 					<p>Fun</p><p style="font-family:'BigJohn', sans-serif;">Glee</p>
-				</div>
+				</a>
 
-				<div class="one-third column hvr-outline-out">
+				<a href="place.php?id=5" class="one-third column">
 					<p>Shopping</p><p style="font-family:'BigJohn', sans-serif;">Attire and such</p>		
-				</div>
+				</a>
 			</div>
 
 			<div class="row">
-				<div class="one-third column hvr-outline-out">
+				<a href="place.php?id=6" class="one-third column">
 					<p>Dining</p><p style="font-family:'BigJohn', sans-serif;">Consume</p>
-				</div>
+				</a>
 
-				<div class="one-third column hvr-outline-out">
-					<p>Misc</p><p style="font-family:'BigJohn', sans-serif;">Adventurous</p>
-				</div>
+				<a href="place.php?id=7" class="one-third column">
+					<p>Pop Culture</p><p style="font-family:'BigJohn', sans-serif;">Adventurous</p>
+				</a>
 
-				<div class="one-third column hvr-outline-out">
+				<a href="place.php?id=8" class="one-third column">
 					<p>Help</p><p style="font-family:'BigJohn', sans-serif;">What is this</p>
-				</div>
+				</a>
 			</div>
 		</div>
 

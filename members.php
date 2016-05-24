@@ -1,9 +1,11 @@
-<?php include('partials.php'); 
+<?php 
+	include('partials.php');
+	require("db_info.php"); 
 	
 	$partials = new Partials();
 
 	if(isset($_COOKIE["current_user"])) {
-		header("Location: http://localhost/showcase/home.php");
+		header("Location: ".$url_scheme."home.php");
 	}
 ?>
 <!DOCTYPE html>
