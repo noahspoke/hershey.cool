@@ -2,7 +2,7 @@
 	require 'medoo.php';
 	require 'db_info.php';
 
-	$name = $_POST["name"];
+	$post_name = $_POST["name"];
 	$pid = $_POST["pid"];
 	$highlight = $_POST["highlight"];
 	$description = $_POST["description"];
@@ -23,7 +23,7 @@
 
 	$DB->insert('records', [
 			'type' => 'image',
-			'attributions' => $name,
+			'attributions' => $post_name,
 			'place_id' => $pid,
 			'highlight' => $highlight,
 			'description' => $description,

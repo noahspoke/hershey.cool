@@ -6,6 +6,7 @@
 	define('DATABASE_PASS', $pass);
 	define('DATABASE_HOST', $host);
 	include_once('class.DBPDO.php');
+	include_once('codes.php');
 	
 	class Place {
 
@@ -41,7 +42,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<script src="jquery-2.1.4.min.js"></script>
 	<script src="assets/jquery.popupoverlay.js"></script>
@@ -129,7 +130,7 @@
 			width: 100%;
 			text-align: center;
 			font-family: 'SlimJoe', sans-serif;
-			padding: 2% 0;
+			padding: 16px 0;
 			z-index: 1;
 		}
 
@@ -310,6 +311,10 @@
 		@media screen and (min-width: 481px) and (max-width: 768px) {
 			#grid[data-columns]::before {
 				content: '2 .column.size-1of2';
+			}
+
+			body {
+				display: none;
 			}
 		}
 
@@ -506,13 +511,13 @@
 		<footer><button class="btn btn-1 btn-1e"><a href="new.php?pid=<?php echo $current_place["id"]; ?>">Add a new idea.</a></button></footer>
 
 		<?php 
+			$code = new Codes();
 			if (isset($_COOKIE["current_user"])) {
 		?>
-				<p style="margin: 44px 0;" class="average_text"><?php echo $current_user["name"]; ?>  <a href="logout.php">Log Out.</a></p>
+				<p style="margin: 44px 0 0 0; padding-top:32px;" class="average_text"><?php echo $current_user["name"]; ?>  <a href="logout.php">Log Out.</a></p>		
 		<?php
 			}
 		?>
-
 	</body>
 
 </head>

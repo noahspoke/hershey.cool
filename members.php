@@ -32,6 +32,10 @@
 	<form action="login.php" method="post">
   			<h1>We Welcome You With Open Arms, Friend</h1>
   			<div class="question">
+    			<input type="text" name="code" required max-length="254"/>
+    			<label>Unlock Code</label>
+  			</div>
+  			<div class="question">
     			<input type="text" name="name" required max-length="254"/>
     			<label>Username</label>
   			</div>
