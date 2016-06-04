@@ -4,23 +4,23 @@ body {
 }
 
 header {
-			text-align: left;
-			font-size: 16px;
-			color: white;
-			background-color: #411112;
-			font-size: 4vh;
-			font-family: 'BigJohn', sans-serif;
-			z-index: -2;
-			padding:2% 2%;
-			margin: 0;
-		}
+	text-align: left;
+	font-size: 16px;
+	color: white;
+	background-color: #411112;
+	font-size: 4vh;
+	font-family: 'BigJohn', sans-serif;
+	z-index: -2;
+	padding:16px;
+	margin: 0;
+}
 
-		a {
-			text-decoration: none;
-			color: white;
-		}
+a {
+	text-decoration: none;
+	color: white;
+}
 
-		a:visted {
-			text-decoration: none;
-			color: white;
-		}
+a:visted {
+	text-decoration: none;
+	color: white;
+}

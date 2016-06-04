@@ -27,31 +27,25 @@
 	$query = "SELECT * FROM users WHERE name='".$username."' AND password='".$hashed_password."'";
 	$user = $DB->fetch($query);
 
-	$isCode = $DB->fetch("SELECT * FROM codes WHERE code = ?", $code);
+	
+	if ($user == false) {
+		//create account
+		$I_DB->insert('users', [
+			'name' => $username,
+			'admin' => 'false',
+			'password' => $hashed_password
+		]);
 
-	if ($isCode != false) {
-		if ($user == false) {
-			//create account
-			$I_DB->insert('users', [
-				'name' => $username,
-				'admin' => 'false',
-				'password' => $hashed_password
-			]);
+		$new_user = $DB->fetch($query);
 
-			$new_user = $DB->fetch($query);
-
-			setcookie("current_user", "", time() - 86400);
-			setcookie("current_user", $new_user["id"], time() + (86400*100000), "/");
-			header("Location: ".$url_scheme."home.php");
-		}
-		else if ($user) {
-			//login
-			setcookie("current_user", "", time() - 86400);
-			setcookie("current_user", $user["id"], time() + (86400*100000), "/");
-			header("Location: ".$url_scheme."home.php");
-		}
+		setcookie("current_user", "", time() - 86400);
+		setcookie("current_user", $new_user["id"], time() + (86400*100000), "/");
+		header("Location: ".$url_scheme."home.php");
 	}
-	else {
-		header("Location: ".$url_scheme."/home.php");
+	else if ($user) {
+		//login
+		setcookie("current_user", "", time() - 86400);
+		setcookie("current_user", $user["id"], time() + (86400*100000), "/");
+		header("Location: ".$url_scheme."home.php");
 	}
 ?>

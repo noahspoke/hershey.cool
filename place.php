@@ -118,7 +118,7 @@
 			font-size: 4vh;
 			font-family: 'BigJohn', sans-serif;
 			z-index: -2;
-			padding:2% 2%;
+			padding:16px;
 			line-height: 150%;
 		}
 
@@ -127,7 +127,8 @@
 		}
 
 		.average_text {
-			width: 100%;
+			width: 90%;
+			margin-left: 5%;
 			text-align: center;
 			font-family: 'SlimJoe', sans-serif;
 			padding: 16px 0;
@@ -253,7 +254,8 @@
 
 		footer {
 			height: 64px;
-			width: 100%;
+			width: 90%;
+			margin-left: 5%;
 			color: white;
 			text-align: center;
 			font-family: 'BigJohn', sans-serif;
@@ -306,15 +308,15 @@
 			#grid[data-columns]::before {
 				content: '1 .column.size-1of1';
 			}
+
+			.popup_a {
+				font-size: 3.5vw;
+			}
 		}
 
 		@media screen and (min-width: 481px) and (max-width: 768px) {
 			#grid[data-columns]::before {
 				content: '2 .column.size-1of2';
-			}
-
-			body {
-				display: none;
 			}
 		}
 
@@ -514,7 +516,7 @@
 			$code = new Codes();
 			if (isset($_COOKIE["current_user"])) {
 		?>
-				<p style="margin: 44px 0 0 0; padding-top:32px;" class="average_text"><?php echo $current_user["name"]; ?>  <a href="logout.php">Log Out.</a></p>		
+				<p style="margin: 44px 0 0 0; padding-top:32px; width:100%;" class="average_text"><?php echo $current_user["name"]; ?>  <a href="logout.php">Log Out.</a></p>		
 		<?php
 			}
 		?>

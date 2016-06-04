@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="header.css">
 	<script type="text/javascript">
 		var inputs = document.querySelectorAll( '.inputfile' );
@@ -67,7 +67,7 @@
   			<h1>Oh Yay New Ideas</h1>
   			<div class="question">
     			<input type="text" name="name" required/>
-    			<label>Name of this establishment</label>
+    			<label>The Name</label>
   			</div>
   			<div class="question">
     			<input type="text" name="highlight" required/>

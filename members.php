@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<link rel="stylesheet" type="text/css" href="fonts.css">
 	<link rel="stylesheet" href="form.css">
@@ -31,10 +31,6 @@
 
 	<form action="login.php" method="post">
   			<h1>We Welcome You With Open Arms, Friend</h1>
-  			<div class="question">
-    			<input type="text" name="code" required max-length="254"/>
-    			<label>Unlock Code</label>
-  			</div>
   			<div class="question">
     			<input type="text" name="name" required max-length="254"/>
     			<label>Username</label>

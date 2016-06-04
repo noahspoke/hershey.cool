@@ -14,7 +14,7 @@
 		}
 
 		body {
-			background-image: url('assets/dwntwn_hershey.JPG');
+			background-image: url('http://tsunamic-cdn.bitballoon.com/dwntwn_hershey.JPG');
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -41,6 +41,17 @@
             4px 4px 0px #c43235, 
             7px 7px 0px rgba(0, 0, 0, 0.2);
 		}
+
+    header p {
+      width:90%;
+      margin-left:5%;
+    }
+
+    @media screen and (max-width: 400px) {
+      header p {
+        font-size:24px;
+      }
+    }
 
     .row p {
       margin: 0;
@@ -179,7 +190,7 @@
 </head>
 
 	<body>
-		<header>hershey.cool</header>
+		<header><p>hershey.cool</p></header>
 
     <div class="grad">
     
