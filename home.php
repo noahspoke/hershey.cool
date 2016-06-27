@@ -218,7 +218,7 @@
 					<p>Pop Culture</p><p style="font-family:'BigJohn', sans-serif;">Adventurous</p>
 				</a>
 
-				<a href="place.php?id=8" class="one-third column">
+				<a href="help.php" class="one-third column">
 					<p>Help</p><p style="font-family:'BigJohn', sans-serif;">What is this</p>
 				</a>
 			</div>
